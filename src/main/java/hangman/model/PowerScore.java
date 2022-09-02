@@ -12,7 +12,15 @@ public class PowerScore implements GameScore {
      */
     @Override
     public int calculateScore(int correctCount, int incorrectCount) {
-        return 0;
+        int points = 0;
+        for (int i = 1; i <= correctCount; i++) {
+            points += Math.pow(5, i);
+        }
+        if (points > 500) {
+            points = 500;
+        }
+        points -= 8*incorrectCount;
+        return points;
     }
 }
 

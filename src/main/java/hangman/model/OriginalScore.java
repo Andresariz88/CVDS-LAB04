@@ -17,5 +17,6 @@ public class OriginalScore implements GameScore {
             points = 0;
         }
         return points;
+
     }
 }

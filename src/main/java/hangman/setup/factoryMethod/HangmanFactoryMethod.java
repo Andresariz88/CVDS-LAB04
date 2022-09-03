@@ -9,5 +9,5 @@ abstract public class HangmanFactoryMethod {
     abstract public Language createLanguage();
     abstract public HangmanDictionary createDictionary();
     abstract public HangmanPanel createHangmanPanel();
-    //abstract public OriginalScore createOriginalScore();
+    abstract public OriginalScore createOriginalScore();
 }

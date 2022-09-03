@@ -31,11 +31,13 @@ public class GameModel {
     private Scanner scan;
     private String randomWord;
     private char[] randomWordCharArray;
+    private GameScore schemeScore;
     
     
    
-    public GameModel(HangmanDictionary dictionary){
+    public GameModel(HangmanDictionary dictionary, GameScore schemeScore){
         //this.dictionary = new EnglishDictionaryDataSource();
+        this.schemeScore = schemeScore;
         this.dictionary=dictionary;
         randomWord = selectRandomWord();
         randomWordCharArray = randomWord.toCharArray();
@@ -74,12 +76,12 @@ public class GameModel {
         }
         if(positions.size() == 0){
             incorrectCount++;
-            gameScore -= 10;
+            //gameScore -= 10;
+            gameScore = schemeScore.calculateScore(correctCount, incorrectCount);
         } else {
             correctCount += positions.size();
         }
         return positions;
-        
     }
     
     //getDateTime

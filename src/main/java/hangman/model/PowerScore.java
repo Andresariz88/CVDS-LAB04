@@ -20,6 +20,9 @@ public class PowerScore implements GameScore {
             points = 500;
         }
         points -= 8*incorrectCount;
+        if (points < 0) {
+            points = 0;
+        }
         return points;
     }
 }

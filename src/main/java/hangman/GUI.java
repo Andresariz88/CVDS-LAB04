@@ -54,10 +54,11 @@ public class GUI {
 
     @Inject
     // Use Guice constructor
-    public GUI(Language language, HangmanDictionary dictionary, HangmanPanel hangmanPanel){
+    public GUI(Language language, HangmanDictionary dictionary, HangmanPanel hangmanPanel, GameScore schemeScore){
         this.language = language;
         this.dictionary= dictionary;
         this.hangmanPanel = hangmanPanel;
+        this.schemeScore = schemeScore;
     }
 
     //method: setup

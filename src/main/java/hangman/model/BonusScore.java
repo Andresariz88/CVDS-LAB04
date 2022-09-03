@@ -1,5 +1,7 @@
 package hangman.model;
 
+import com.google.inject.Singleton;
+
 public class BonusScore implements GameScore {
     /**
      * Calculates the game score by the bonus rules

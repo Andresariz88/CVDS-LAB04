@@ -1,5 +1,8 @@
 package hangman.model;
 
+
+import com.google.inject.Singleton;
+
 public class OriginalScore implements GameScore {
     /**
      * Calculates the game score by the original rules

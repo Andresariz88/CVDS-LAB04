@@ -54,7 +54,8 @@ public class GameModel {
         randomWordCharArray = randomWord.toCharArray();
         incorrectCount = 0;
         correctCount = 0;
-        gameScore = 100;
+        //gameScore = 100;
+        gameScore = schemeScore.calculateScore(correctCount, incorrectCount);
     }
 
     //setDateTime
@@ -77,10 +78,10 @@ public class GameModel {
         if(positions.size() == 0){
             incorrectCount++;
             //gameScore -= 10;
-            gameScore = schemeScore.calculateScore(correctCount, incorrectCount);
         } else {
             correctCount += positions.size();
         }
+        gameScore = schemeScore.calculateScore(correctCount, incorrectCount);
         return positions;
     }
     
